@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "google_login": "gcloud auth login",
+    "google_default_login_application_default": "gcloud auth application-default login",
+    "set_google_project": "gcloud config set project mikes-demo",
+    "compile_template_file": "mvn compile exec:java -Dexec.mainClass=com.ursolutions.dataflow.beam.pipeline.CloudRunnerMain -Dexec.args=\"--runner=DataflowRunner --project=mikes-demo --stagingLocation=gs://mikes-dataflow-template/staging/ --templateLocation=gs://mikes-dataflow-template/templates/mikes-dataflow --tempLocation=gs://mikes-dataflow-template/tempLocation/ --region=europe-central2 \""
+  }
+}

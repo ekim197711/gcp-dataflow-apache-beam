@@ -1,0 +1,12 @@
+{
+  "name": "terraform",
+  "scripts": {
+    "enabler_git_bash_for_npm": "npm config set script-shell \"C:\\Program Files\\Git\\bin\\bash.exe\"",
+    "enabler_gloud_creds": "gcloud auth application-default login",
+    "DEV_DATAFLOW_init": "cd environments/dev-dataflow && terraform init",
+    "DEV_DATAFLOW_plan": "cd environments/dev-dataflow && terraform plan",
+    "DEV_DATAFLOW_apply": "cd environments/dev-dataflow && terraform apply -auto-approve",
+    "import": "cd environments/dev-dataflow && terraform import module.dataflow.google_compute_network.vpc_network_default default"
+  }
+}
+

@@ -1,0 +1,20 @@
+<configuration>
+    <appender name="standard_output_to_console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %yellow([%thread]) %highlight(%-5level) %logger{36} .%C %M - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="json_output" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <fieldNames>
+                <level>severity</level>
+            </fieldNames>
+        </encoder>
+    </appender>
+    <root level="info">
+        <appender-ref ref="json_output"/>
+    </root>
+</configuration>
