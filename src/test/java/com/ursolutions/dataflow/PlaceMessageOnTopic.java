@@ -12,7 +12,7 @@ public class PlaceMessageOnTopic {
     private static String PROJECT_ID = "mikes-demo";
     private static String TOPIC_ID = "dataflow_directrunner";
 
-    private static String[] PAYLOADS_TO_PLACE_ON_TOPIC = {Payloads.MIKES_PAYLOAD1};
+    private static String[] PAYLOADS_TO_PLACE_ON_TOPIC = {Payloads.MIKES_PAYLOAD3};
 
     @Test
     public void dumpMessageToTopic() throws IOException {
